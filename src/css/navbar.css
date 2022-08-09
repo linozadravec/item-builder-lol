@@ -28,20 +28,21 @@ nav {
 }
 
 .navMenu .dot {
+  margin-top: 30px;
   width: 6px;
   height: 6px;
   background: #C89B3C;
   border-radius: 50%;
   opacity: 0;
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px);
+  -webkit-transform: translateX(-50px);
+  transform: translateX(-140px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px);
+  -webkit-transform: translateX(-50px);
+  transform: translateX(-140px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
@@ -49,7 +50,7 @@ nav {
 
 .navMenu a:nth-child(2):hover ~ .dot {
   -webkit-transform: translateX(110px);
-  transform: translateX(110px);
+  transform: translateX(-50px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;

@@ -6,7 +6,7 @@ export default function Nav(){
         <nav className="navMenu">
             <a href="#play" >Play</a>
             <a href="#about" >About</a>
-            <div class="dot"></div>
+            <div className="dot"></div>
         </nav>
     )
 }
