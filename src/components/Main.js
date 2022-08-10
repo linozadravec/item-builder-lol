@@ -36,13 +36,24 @@ export default function Main(){
 
             const answerComponents = []
 
-            for(let i=0;i<recipe.length;i++){ //i++ ako je inde
-                arrayComponents[Math.floor(Math.random() * 6)] = itemComponentsData.itemList.filter((item)=> item.name===recipe[i])[0] //broj komponenti u odgovoru je '*6'
+            const uniqueNumbers=generateUniqueNumbers(recipe.length)
+
+            for(let i=0;i<recipe.length;i++){ 
+                arrayComponents[uniqueNumbers[i]] = itemComponentsData.itemList.filter((item)=> item.name===recipe[i])[0] //broj komponenti u odgovoru je '*6'
             }
             console.log(arrayComponents)
             return arrayComponents
         })
 
+    }
+
+    function generateUniqueNumbers(n){
+        var arr = [];
+        while(arr.length < n){
+            var r = Math.floor(Math.random() * 6);
+            if(arr.indexOf(r) === -1) arr.push(r);
+        }
+        return arr
     }
 
     function startGame(){
