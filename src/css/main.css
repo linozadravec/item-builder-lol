@@ -33,5 +33,7 @@ main h3{
 
 .main--question{
     display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-self: center;
 }

@@ -1,28 +1,88 @@
 import React from 'react'
-import Question from './Question'
-import Answer from './Answer'
+import ItemCompleted from './ItemCompleted'
+import ItemComponent from './ItemComponent'
+import {nanoid} from "nanoid"
 import '../css/main.css'
-import itemsData from '../CompleteItemsData.js'
+
+import itemsCompletedData from '../CompleteItemsData.js'
+import itemComponentsData from "../ComponentItemsData"
+
 
 export default function Main(){
+    let emptyObjString = JSON.stringify({"name":"Empty","id":0})
+
+    const [gameStarted, setGameStarted] = React.useState(false)
+    const [completedItem, setcompletedItem] = React.useState(emptyObjString)
+    const [itemComponents, setItemComponents] = React.useState([emptyObjString])
+    const [selectedAnswers, setSelectedAnswers] = React.useState([emptyObjString])
+
+
+
+    function generateQuestion(){
+        const generatedCompletedItem = itemsCompletedData.itemList[Math.floor(Math.random() * itemsCompletedData.itemList.length)]
+        setcompletedItem(JSON.stringify(generatedCompletedItem))
+        console.log(generatedCompletedItem)
+
+        const recipe = generatedCompletedItem.recipe
+        setItemComponents(() =>{
+            const arrayComponents = []
+            
+            //Izvrsava se 2 put 
+
+            // Possible promijeniti da itemi ne budu duplikati
+            for(let i=0;i<6;i++){ //broj komponenti u odgovoru je iMax
+                arrayComponents.push(itemComponentsData.itemList[Math.floor(Math.random() * itemComponentsData.itemList.length)])
+            }
+
+            const answerComponents = []
+
+            for(let i=0;i<recipe.length;i++){ //i++ ako je inde
+                arrayComponents[Math.floor(Math.random() * 6)] = itemComponentsData.itemList.filter((item)=> item.name===recipe[i])[0] //broj komponenti u odgovoru je '*6'
+            }
+            console.log(arrayComponents)
+            return arrayComponents
+        })
+
+    }
+
+    function startGame(){
+        generateQuestion()
+        setGameStarted(true)
+    }
+
+    const itemComponentElements = itemComponents.map(item => (
+        <ItemComponent 
+            key= {nanoid()}
+            name = {item.name}
+            id = {item.id}
+        />
+    ))
+
     return (
         <main>
-            <h3>Item builder</h3>
-            <div>
-                <div className="main--question">
-                    <Question />
-                </div>
-            </div>  
-            <div className="main--answers">
-                <Answer />
-                <Answer />
-                <Answer />
-                <Answer />
-                <Answer />
-                <Answer />
-            </div>
-                
+                <h3>Item builder</h3> 
+
+                {
+                    gameStarted 
+                    ?
+                    <React.Fragment>
+                        <div>
+                            <div className="main--question">
+                                <ItemCompleted 
+                                completedItem = {completedItem}
+                                />
+                            </div>
+                        </div>  
+                         <div className="main--answers">
+                            {itemComponentElements}
+                        </div> 
+                    </React.Fragment>
+                    :
+                    <button onClick={startGame}>Start Game</button>
+                    }
             
         </main>
+        
     )
+    
 }
