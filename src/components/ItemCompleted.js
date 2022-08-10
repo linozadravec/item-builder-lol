@@ -4,7 +4,7 @@ import itemsCompletedData from '../CompleteItemsData.js'
 export default function ItemCompleted(props){
     
     return  <div>
-                <p>{JSON.parse(props.completedItem).id ? JSON.parse(props.completedItem).name : "Empty"}</p>
+                <h2>{JSON.parse(props.completedItem).id ? JSON.parse(props.completedItem).name : "Empty"}</h2>
             </div>
 
 }
