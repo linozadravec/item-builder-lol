@@ -3,6 +3,7 @@ const itemsData = {
         "itemList": [
             {"name": "Aegis of the Legion",
                 "id": 3105,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -23,6 +24,7 @@ const itemsData = {
             },
             {"name": "Aether Wisp",
                 "id": 3113,
+"url" : "",
                 "nickname": ["spooky ghost"],
                 "tier": 2,
                 "maps": {
@@ -49,6 +51,7 @@ const itemsData = {
             },
             {"name": "Amplifying Tome",
                 "id": 1052,
+"url" : "",
                 "nickname": ["amptome", "book"],
                 "tier": 1,
                 "maps": {
@@ -67,6 +70,7 @@ const itemsData = {
             },
             {"name": "B. F. Sword",
                 "id": 1038,
+"url" : "",
                 "nickname": ["bf"],
                 "tier": 1,
                 "maps": {
@@ -86,6 +90,7 @@ const itemsData = {
             },
             {"name": "Bami's Cinder",
                 "id": 6660,
+"url" : "",
                 "nickname": ["fire"],
                 "tier": 2,
                 "maps": {
@@ -111,6 +116,7 @@ const itemsData = {
             },
             {"name": "Bandleglass Mirror",
                 "id": 4642,
+"url" : "",
                 "nickname": ["yordle"],
                 "tier": 2,
                 "maps": {
@@ -131,6 +137,7 @@ const itemsData = {
             },
             {"name": "Blasting Wand",
                 "id": 1026,
+"url" : "",
                 "tier": 1,
                 "maps": {
                     "sr": true,
@@ -148,6 +155,7 @@ const itemsData = {
             },
             {"name": "Blighting Jewel",
                 "id": 4630,
+"url" : "",
                 "nickname": ["purple"],
                 "tier": 2,
                 "itemlimit": "Void Pen",
@@ -168,6 +176,7 @@ const itemsData = {
             },
             {"name": "Bramble Vest",
                 "id": 3076,
+"url" : "",
                 "nickname": ["grievous wounds"],
                 "tier": 2,
                 "maps": {
@@ -193,6 +202,7 @@ const itemsData = {
             },
             {"name": "Caulfield's Warhammer",
                 "id": 3133,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -213,6 +223,7 @@ const itemsData = {
             },
             {"name": "Chain Vest",
                 "id": 1031,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -233,6 +244,7 @@ const itemsData = {
             },
             {"name": "Cloak of Agility",
                 "id": 1018,
+"url" : "",
                 "tier": 1,
                 "maps": {
                     "sr": true,
@@ -249,6 +261,7 @@ const itemsData = {
             },
             {"name": "Cloth Armor",
                 "id": 1029,
+"url" : "",
                 "tier": 1,
                 "maps": {
                     "sr": true,
@@ -270,6 +283,7 @@ const itemsData = {
             },
             {"name": "Crystalline Bracer",
                 "id": 3801,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -289,6 +303,7 @@ const itemsData = {
             },
             {"name": "Dagger",
                 "id": 1042,
+"url" : "",
                 "tier": 1,
                 "maps": {
                     "sr": true,
@@ -307,6 +322,7 @@ const itemsData = {
             },
             {"name": "Executioner's Calling",
                 "id": 3123,
+"url" : "",
                 "nickname": ["grievous"],
                 "tier": 2,
                 "maps": {
@@ -334,6 +350,7 @@ const itemsData = {
             },
             {"name": "Fiendish Codex",
                 "id": 3108,
+"url" : "",
                 "nickname": ["book"],
                 "tier": 2,
                 "maps": {
@@ -353,6 +370,7 @@ const itemsData = {
             },
             {"name": "Forbidden Idol",
                 "id": 3114,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -371,6 +389,7 @@ const itemsData = {
             },
             {"name": "Giant's Belt",
                 "id": 1011,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -390,6 +409,7 @@ const itemsData = {
             },
             {"name": "Glacial Buckler",
                 "id": 3024,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -410,6 +430,7 @@ const itemsData = {
             },
             {"name": "Hearthbound Axe",
                 "id": 3051,
+"url" : "",
                 "nickname": ["blue arrow"],
                 "tier": 2,
                 "maps": {
@@ -437,6 +458,7 @@ const itemsData = {
             },
             {"name": "Hexdrinker",
                 "id": 3155,
+"url" : "",
                 "tier": 2,
                 "itemlimit": "Lifeline",
                 "maps": {
@@ -466,6 +488,7 @@ const itemsData = {
             },
             {"name": "Hextech Alternator",
                 "id": 3145,
+"url" : "",
                 "nickname": ["revolver"],
                 "tier": 2,
                 "maps": {
@@ -493,6 +516,7 @@ const itemsData = {
             },
             {"name": "Ironspike Whip",
                 "id": 6029,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -518,6 +542,7 @@ const itemsData = {
             },
             {"name": "Kindlegem",
                 "id": 3067,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -541,6 +566,7 @@ const itemsData = {
             },
             {"name": "Kircheis Shard",
                 "id": 2015,
+"url" : "",
                 "tags": ["HasOnHit", "HasOnAttack"],
                 "tier": 2,
                 "maps": {
@@ -571,6 +597,7 @@ const itemsData = {
             },
             {"name": "Last Whisper",
                 "id": 3035,
+"url" : "",
                 "nickname": ["lw"],
                 "tier": 2,
                 "itemlimit": "Last Whisper",
@@ -593,6 +620,7 @@ const itemsData = {
             },
             {"name": "Leeching Leer",
                 "id": 4635,
+"url" : "",
                 "nickname": ["wota", "catalyst"],
                 "tier": 2,
                 "maps": {
@@ -613,6 +641,7 @@ const itemsData = {
             },
             {"name": "Long Sword",
                 "id": 1036,
+"url" : "",
                 "tier": 1,
                 "maps": {
                     "sr": true,
@@ -631,6 +660,7 @@ const itemsData = {
             },
             {"name": "Lost Chapter",
                 "id": 3802,
+"url" : "",
                 "nickname": ["book"],
                 "tier": 2,
                 "maps": {
@@ -658,6 +688,7 @@ const itemsData = {
             },
             {"name": "Needlessly Large Rod",
                 "id": 1058,
+"url" : "",
                 "nickname": ["nlr"],
                 "tier": 1,
                 "maps": {
@@ -675,6 +706,7 @@ const itemsData = {
             },
             {"name": "Negatron Cloak",
                 "id": 1057,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -694,6 +726,7 @@ const itemsData = {
             },
             {"name": "Noonquiver",
                 "id": 6670,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -719,6 +752,7 @@ const itemsData = {
             },
             {"name": "Null-Magic Mantle",
                 "id": 1033,
+"url" : "",
                 "tier": 1,
                 "maps": {
                     "sr": true,
@@ -740,6 +774,7 @@ const itemsData = {
             },
             {"name": "Oblivion Orb",
                 "id": 3916,
+"url" : "",
                 "nickname": ["grievous"],
                 "tier": 2,
                 "maps": {
@@ -766,6 +801,7 @@ const itemsData = {
             },
             {"name": "Phage",
                 "id": 3044,
+"url" : "",
                 "nickname": ["mallet"],
                 "tier": 2,
                 "maps": {
@@ -793,6 +829,7 @@ const itemsData = {
             },
             {"name": "Pickaxe",
                 "id": 1037,
+"url" : "",
                 "tier": 1,
                 "maps": {
                     "sr": true,
@@ -811,6 +848,7 @@ const itemsData = {
             },
             {"name": "Quicksilver Sash",
                 "id": 3140,
+"url" : "",
                 "nickname": ["qss"],
                 "tier": 2,
                 "itemlimit": "Quicksilver",
@@ -840,6 +878,7 @@ const itemsData = {
             },
             {"name": "Rageknife",
                 "id": 6677,
+"url" : "",
                 "nickname": ["angry"],
                 "tags": ["HasOnHit", "OnHitAppliesLifeSteal"],
                 "tier": 2,
@@ -869,6 +908,7 @@ const itemsData = {
             },
             {"name": "Recurve Bow",
                 "id": 1043,
+"url" : "",
                 "tags": ["HasOnHit", "OnHitAppliesLifeSteal"],
                 "tier": 2,
                 "maps": {
@@ -896,6 +936,7 @@ const itemsData = {
             },
             {"name": "Rejuvenation Bead",
                 "id": 1006,
+"url" : "",
                 "tier": 1,
                 "maps": {
                     "sr": true,
@@ -913,6 +954,7 @@ const itemsData = {
             },
             {"name": "Ruby Crystal",
                 "id": 1028,
+"url" : "",
                 "nickname": ["red"],
                 "tier": 1,
                 "maps": {
@@ -935,6 +977,7 @@ const itemsData = {
             },
             {"name": "Seeker's Armguard",
                 "id": 3191,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -960,6 +1003,7 @@ const itemsData = {
             },
             {"name": "Serrated Dirk",
                 "id": 3134,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -985,6 +1029,7 @@ const itemsData = {
             },
             {"name": "Sheen",
                 "id": 3057,
+"url" : "",
                 "nickname": ["jimmy neutron"],
                 "tags": ["HasOnHit", "OnHitAppliesLifeSteal"],
                 "tier": 1,
@@ -1011,6 +1056,7 @@ const itemsData = {
             },
             {"name": "Spectre's Cowl",
                 "id": 3211,
+"url" : "",
                 "nickname": ["hat", "ghost"],
                 "tier": 2,
                 "maps": {
@@ -1037,6 +1083,7 @@ const itemsData = {
             },
             {"name": "Stopwatch",
                 "id": 2420,
+"url" : "",
                 "nickname": ["zhg", "zonyas", "zhonyas"],
                 "tier": 1,
                 "limit": "Cannot be purchased while owning {{ii|Guardian Angel}} or {{ii|Zhonya's Hourglass}}. Transforms into {{ii|Broken Stopwatch}} when activated, which cannot be activated again. Once broken, all future purchases are also broken. Limited to 1 '''Stopwatch'''.",
@@ -1063,6 +1110,7 @@ const itemsData = {
             },
             {"name": "Tear of the Goddess",
                 "id": 3070,
+"url" : "",
                 "tier": 1,
                 "type": ["Starter"],
                 "itemlimit": "Mana Charge",
@@ -1095,6 +1143,7 @@ const itemsData = {
             },
             {"name": "Tiamat",
                 "id": 3077,
+"url" : "",
                 "tier": 2,
                 "itemlimit": "Hydra",
                 "maps": {
@@ -1121,6 +1170,7 @@ const itemsData = {
             },
             {"name": "Vampiric Scepter",
                 "id": 1053,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -1141,6 +1191,7 @@ const itemsData = {
             },
             {"name": "Verdant Barrier",
                 "id": 4632,
+"url" : "",
                 "nickname": ["necklace"],
                 "tier": 2,
                 "maps": {
@@ -1167,6 +1218,7 @@ const itemsData = {
             },
             {"name": "Warden's Mail",
                 "id": 3082,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,
@@ -1191,6 +1243,7 @@ const itemsData = {
             },
             {"name": "Winged Moonplate",
                 "id": 3066,
+"url" : "",
                 "nickname": ["chaps", "pants", "leggings", "zoomin"],
                 "tier": 2,
                 "maps": {
@@ -1217,6 +1270,7 @@ const itemsData = {
             },
             {"name": "Zeal",
                 "id": 3086,
+"url" : "",
                 "tier": 2,
                 "maps": {
                     "sr": true,

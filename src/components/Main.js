@@ -39,6 +39,12 @@ export default function Main(){
         }
     },[selectedAnswers])
 
+    React.useEffect(()=>{
+        if(mistakes > 2){
+            setGameStarted(false)
+        }
+    },[mistakes])
+
     function generateQuestion(){
         const generatedCompletedItem = itemsCompletedData.itemList[Math.floor(Math.random() * itemsCompletedData.itemList.length)]
         setcompletedItem(JSON.stringify(generatedCompletedItem))
@@ -74,6 +80,8 @@ export default function Main(){
 
     function startGame(){
         generateQuestion()
+        setMistakes(0)
+        setPoints(0)
         setGameStarted(true)
     }
 
@@ -131,8 +139,12 @@ export default function Main(){
                         </div> 
                     </React.Fragment>
                     :
-                    <button onClick={startGame}>Start Game</button>
-                    }
+                    <div>
+                        {mistakes > 2 ? <h1>Game over</h1> : ""}
+                        <button onClick={startGame}>{mistakes > 2 ? "Res" : "S"}tart Game</button>
+                    </div>
+                    
+                }
             
         </main>
         
