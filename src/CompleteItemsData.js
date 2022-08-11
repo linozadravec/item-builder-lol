@@ -33,7 +33,6 @@ const itemsData = {
             "name": "Anathema's Chains",
             "id": 8001,
             "url": "",
-            "url": "",
             "tier": 3,
             "caption": "She swore to dedicate her life to his destruction. The gauntlets heard.",
             "maps": {
@@ -75,7 +74,6 @@ const itemsData = {
             "name": "Archangel's Staff",
             "id": 3003,
             "url": "",
-            "url": "",
             "nickname": ["aa"],
             "tier": 3,
             "type": "=>Seraph's Embrace",
@@ -115,7 +113,6 @@ const itemsData = {
             "name": "Ardent Censer",
             "id": 3504,
             "url": "",
-            "url": "",
             "nickname": ["censor"],
             "tags": ["HasOnHit", "OnHitAppliesLifeSteal"],
             "tier": 3,
@@ -148,7 +145,6 @@ const itemsData = {
             "name": "Axiom Arc",
             "id": 6696,
             "url": "",
-            "url": "",
             "tier": 3,
             "maps": {
                 "sr": true,
@@ -176,7 +172,6 @@ const itemsData = {
         {
             "name": "Banshee's Veil",
             "id": 3102,
-            "url": "",
             "url": "",
             "nickname": ["bv", "spellshield"],
             "tier": 3,
