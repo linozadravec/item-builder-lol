@@ -1,5 +1,4 @@
 import React from "react";
-import itemsCompletedData from '../CompleteItemsData.js'
 
 export default function ItemCompleted(props){
     

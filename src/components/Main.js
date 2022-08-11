@@ -20,8 +20,9 @@ export default function Main(){
     const [mistakes, setMistakes] = React.useState(0)
 
     React.useEffect(()=>{
+        
         if(JSON.parse(completedItem).recipe !== undefined && JSON.parse(completedItem).recipe.length === selectedAnswers.length){
-            console.log("TU")
+
             const containsAll = JSON.parse(completedItem).recipe.every(element => {
                 return selectedAnswers.includes(element);
               });
@@ -86,6 +87,17 @@ export default function Main(){
         })
     }
 
+    
+    //dont know how to avoid ternary, dont know what to initialize it to (const selectedComponentElements = [{}]?)
+    const selectedComponentElements = selectedAnswers.length !== 0 ? selectedAnswers.map((answer) => {
+            return <SelectedComponents
+                key = {nanoid()}
+                selected = {answer}
+                handleRemove = {() => removeAnswer(answer)}
+            />
+    })
+    :
+    undefined
 
 
     const itemComponentElements = itemComponents.map(item => (
@@ -110,7 +122,7 @@ export default function Main(){
                                 completedItem = {completedItem}
                                 />
                                 <div className="question--selected">
-                                    {/* {selectedAnswersElements} */}
+                                    {selectedComponentElements}
                                 </div>
                             </div>
                         </div>  
