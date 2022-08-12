@@ -17,6 +17,7 @@ export default function Main(){
     const [itemComponents, setItemComponents] = React.useState([emptyObjString])
     const [selectedAnswers, setSelectedAnswers] = React.useState([])
     const [points, setPoints] = React.useState(0)
+    const [pointsRecord, setPointsRecord] = React.useState(localStorage.getItem("recordPoints"))
     const [mistakes, setMistakes] = React.useState(0)
 
     React.useEffect(()=>{
@@ -40,6 +41,19 @@ export default function Main(){
     },[selectedAnswers])
 
     React.useEffect(()=>{
+        if(localStorage.getItem("recordPoints")===null){
+            localStorage.setItem("recordPoints", 0)
+        }
+    })
+
+    React.useEffect(()=>{
+        if(points >  parseInt(localStorage.getItem("recordPoints"))){
+            localStorage.setItem("recordPoints", points)
+            setPointsRecord(localStorage.getItem("recordPoints")) //without this state localstorage is updated 1 render too late
+        }
+    },[points])
+
+    React.useEffect(()=>{
         if(mistakes > 2){
             setGameStarted(false)
         }
@@ -54,7 +68,6 @@ export default function Main(){
             const arrayComponents = []
             
             //Izvrsava se 2 put 
-
             // Possible promijeniti da itemi ne budu duplikati
             for(let i=0;i<6;i++){ //broj komponenti u odgovoru je iMax
                 arrayComponents.push(itemComponentsData.itemList[Math.floor(Math.random() * itemComponentsData.itemList.length)])
@@ -96,18 +109,17 @@ export default function Main(){
     }
 
     
-    //dont know how to avoid ternary, dont know what to initialize it to (const selectedComponentElements = [{}]?)
-    const selectedComponentElements = selectedAnswers.length !== 0 ? selectedAnswers.map((answer) => {
-            return <SelectedComponents
-                key = {nanoid()}
-                selected = {answer}
-                handleRemove = {() => removeAnswer(answer)}
-            />
-    })
-    :
-    undefined
+    
 
+    const selectedComponentElements= selectedAnswers.map((answer) => {
+        return <SelectedComponents
+            key = {nanoid()}
+            selected = {answer}
+            handleRemove = {() => removeAnswer(answer)}
+        />
+})
 
+    console.log(itemsCompletedData.itemList[0].url)
     const itemComponentElements = itemComponents.map(item => (
         <ItemComponent 
             key= {nanoid()}
@@ -118,7 +130,7 @@ export default function Main(){
     ))
     return (
         <main>
-                <h3>Item builder - {points} points / {mistakes} mistakes</h3> 
+                <h3>Item builder</h3>
 
                 {
                     gameStarted 
@@ -137,17 +149,20 @@ export default function Main(){
                          <div className="main--answers">
                             {itemComponentElements}
                         </div> 
+                        <div>
+                        
+                        </div>
                     </React.Fragment>
                     :
                     <div>
                         {mistakes > 2 ? <h1>Game over</h1> : ""}
                         <button onClick={startGame}>{mistakes > 2 ? "Res" : "S"}tart Game</button>
+                        
                     </div>
-                    
                 }
-            
-        </main>
-        
+                <h3>{points} points / {mistakes} mistakes</h3>
+                <h4>Record: {pointsRecord ? pointsRecord : 0}</h4>
+        </main>    
     )
     
 }
