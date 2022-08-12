@@ -3,7 +3,9 @@ import ItemCompleted from './ItemCompleted'
 import ItemComponent from './ItemComponent'
 import SelectedComponents from './SelectedComponents'
 import {nanoid} from "nanoid"
+
 import '../css/main.css'
+import Countdown from 'react-countdown'
 
 import itemsCompletedData from '../CompleteItemsData.js'
 import itemComponentsData from "../ComponentItemsData"
@@ -19,6 +21,8 @@ export default function Main(){
     const [points, setPoints] = React.useState(0)
     const [pointsRecord, setPointsRecord] = React.useState(localStorage.getItem("recordPoints"))
     const [mistakes, setMistakes] = React.useState(0)
+    const [endGame, setEndGame] = React.useState()
+    
 
     React.useEffect(()=>{
         
@@ -45,6 +49,7 @@ export default function Main(){
             localStorage.setItem("recordPoints", 0)
         }
     })
+
 
     React.useEffect(()=>{
         if(points >  parseInt(localStorage.getItem("recordPoints"))){
@@ -95,6 +100,7 @@ export default function Main(){
         generateQuestion()
         setMistakes(0)
         setPoints(0)
+        setEndGame(Date.now() + 60000)
         setGameStarted(true)
     }
 
@@ -102,6 +108,7 @@ export default function Main(){
         setSelectedAnswers((prevAnswers)=> [...prevAnswers, componentName])      
     }
 
+    //if two selected components are same this removes both at the same time
     function removeAnswer(componentName){
         setSelectedAnswers((prevAnswers)=>{
             return prevAnswers.filter((answer)=> answer !== componentName)
@@ -129,13 +136,17 @@ export default function Main(){
     ))
     return (
         <main>
-                <h3>Item builder</h3>
-
+                <h3>LoL Item builder</h3>
+                
                 {
                     gameStarted 
                     ?
                     <React.Fragment>
                         <div>
+                            <Countdown 
+                            date={endGame}
+                            onComplete={()=>setGameStarted(false)}
+                            />
                             <div className="main--question">
                                 <ItemCompleted 
                                 completedItem = {completedItem}
