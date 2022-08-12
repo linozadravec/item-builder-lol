@@ -108,23 +108,22 @@ export default function Main(){
         })
     }
 
-    
-    
-
+    //selectedcomponents saved as only name not object
     const selectedComponentElements= selectedAnswers.map((answer) => {
         return <SelectedComponents
             key = {nanoid()}
             selected = {answer}
             handleRemove = {() => removeAnswer(answer)}
+            url = {itemComponentsData.itemList.filter(function(item){return item.name === answer; })[0].url}
         />
 })
 
-    console.log(itemsCompletedData.itemList[0].url)
     const itemComponentElements = itemComponents.map(item => (
         <ItemComponent 
             key= {nanoid()}
             name = {item.name}
             id = {item.id}
+            url = {item.url}
             selectAnswer = {()=>selectAnswer(item.name)}
         />
     ))
