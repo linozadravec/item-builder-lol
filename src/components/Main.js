@@ -21,7 +21,9 @@ export default function Main(){
     const [points, setPoints] = React.useState(0)
     const [pointsRecord, setPointsRecord] = React.useState(localStorage.getItem("recordPoints"))
     const [mistakes, setMistakes] = React.useState(0)
-    const [endGame, setEndGame] = React.useState()
+    const [endGameTime, setEndGameTime] = React.useState()
+    const [normalMode, setNormalMode] = React.useState(false)
+
     
 
     React.useEffect(()=>{
@@ -52,14 +54,14 @@ export default function Main(){
 
 
     React.useEffect(()=>{
-        if(points >  parseInt(localStorage.getItem("recordPoints"))){
+        if(normalMode && points >  parseInt(localStorage.getItem("recordPoints"))){
             localStorage.setItem("recordPoints", points)
             setPointsRecord(localStorage.getItem("recordPoints")) //without this state localstorage is updated 1 render too late
         }
     },[points])
 
     React.useEffect(()=>{
-        if(mistakes > 2){
+        if(mistakes > 2 && normalMode){
             setGameStarted(false)
         }
     },[mistakes])
@@ -101,7 +103,7 @@ export default function Main(){
         setSelectedAnswers([])
         setMistakes(0)
         setPoints(0)
-        setEndGame(Date.now() + 60000)
+        setEndGameTime(Date.now() + 60000)
         setGameStarted(true)
     }
 
@@ -109,11 +111,15 @@ export default function Main(){
         setSelectedAnswers((prevAnswers)=> [...prevAnswers, componentName])      
     }
 
-    //if two selected components are same this removes both at the same time
     function removeAnswer(componentName){
         setSelectedAnswers((prevAnswers)=>{
             return prevAnswers.filter((answer)=> answer !== componentName)
         })
+    }
+
+    function changeCheckbox(){
+        var checkBox = document.getElementById("modeCheckBox");
+        setNormalMode(checkBox.checked)
     }
 
     //selectedcomponents saved as only name not object
@@ -135,19 +141,37 @@ export default function Main(){
             selectAnswer = {()=>selectAnswer(item.name)}
         />
     ))
+
     return (
-        <main>
+        <main> 
                 <h3>LoL Item builder</h3>
+                {gameStarted ? 
+                ""
+                :
+                <div>
+                    <p>Select mode:</p>
+                    <div className="main--toggleSwitch">
+                        <p>Learning</p>
+                        <label className="switch">
+                        <input type="checkbox" id="modeCheckBox" checked={normalMode} onChange={changeCheckbox}/>
+                        <span className="slider round"></span>
+                        </label>
+                        <p>Normal</p>
+                    </div>
+                </div>
+                }
+                {gameStarted && !normalMode && <button onClick={()=>setGameStarted(false)}>Go back</button>}
                 
                 {
                     gameStarted 
                     ?
                     <React.Fragment>
                         <div>
-                            <Countdown 
-                            date={endGame}
+                            
+                            {normalMode && <Countdown 
+                            date={endGameTime}
                             onComplete={()=>setGameStarted(false)}
-                            />
+                            />}
                             <div className="main--question">
                                 <ItemCompleted 
                                 completedItem = {completedItem}
@@ -171,8 +195,10 @@ export default function Main(){
                         
                     </div>
                 }
-                <h3>{points} points / {mistakes} mistakes</h3>
-                <h4>Record: {pointsRecord ? pointsRecord : 0}</h4>
+                <div>
+                    <h3>{points} points / {mistakes} mistakes</h3>
+                    {normalMode && <h4>Record: {pointsRecord ? pointsRecord : 0}</h4>}
+                </div>
         </main>    
     )
     
