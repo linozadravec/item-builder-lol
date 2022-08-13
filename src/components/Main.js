@@ -98,6 +98,7 @@ export default function Main(){
 
     function startGame(){
         generateQuestion()
+        setSelectedAnswers([])
         setMistakes(0)
         setPoints(0)
         setEndGame(Date.now() + 60000)
