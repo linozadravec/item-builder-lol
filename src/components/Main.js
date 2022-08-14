@@ -156,12 +156,23 @@ export default function Main(){
 
     return (
         <main> 
-                <h3>LoL Item builder</h3>
+                <div className='toplayer'>
+                    <div className="main--back">
+                        {gameStarted && !normalMode && <button onClick={()=>setGameStarted(false)}>Go back</button>}
+                    </div>
+                    <div>
+                        <h3>LoL Item builder</h3>
+                    </div>
+                    <div>
+                        <h3></h3>
+                    </div>
+                </div>
+                
                 {gameStarted ? 
                 ""
                 :
                 <div>
-                    <p>Select mode:</p>
+                    <p className="main--textCenter">Select mode:</p>
                     <div className="main--toggleSwitch">
                         <p>Learning</p>
                         <label className="switch">
@@ -172,22 +183,23 @@ export default function Main(){
                     </div>
                 </div>
                 }
-                {gameStarted && !normalMode && <button onClick={()=>setGameStarted(false)}>Go back</button>}
+                
                 
                 {
                     gameStarted 
                     ?
                     <React.Fragment>
                         <div>
-                            
-                            {normalMode && <Countdown 
-                            date={endGameTime}
-                            onComplete={()=>setGameStarted(false)}
-                            />}
                             <div className="main--question">
+                                {normalMode && <Countdown 
+                                date={endGameTime}
+                                onComplete={()=>setGameStarted(false)}
+                                />}
+                                <div>
                                 <ItemCompleted 
-                                completedItem = {completedItem}
+                                    completedItem = {completedItem}
                                 />
+                                </div>
                                 <div className="question--selected">
                                     {selectedComponentElements}
                                 </div>
@@ -215,15 +227,15 @@ export default function Main(){
                         
                     </React.Fragment>
                     :
-                    <div>
+                    <div className="main--start">
                         {mistakes > 2 ? <h1>Game over</h1> : ""}
-                        <button onClick={startGame}>{mistakes > 2 ? "Res" : "S"}tart Game</button>
+                        <button className="main--startBtn" onClick={startGame}>{mistakes > 2 ? "Res" : "S"}tart Game</button>
                         
                     </div>
                 }
                 <div>
                     <h3>{points} points / {mistakes} mistakes</h3>
-                    {normalMode && <h4>Record: {pointsRecord ? pointsRecord : 0}</h4>}
+                    {normalMode && <h4 className='main--textCenter'>Record: {pointsRecord ? pointsRecord : 0}</h4>}
                 </div>
         </main>    
     )
