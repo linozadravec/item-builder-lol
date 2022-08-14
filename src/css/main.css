@@ -120,3 +120,17 @@ main h3{
   }
 
   /* toggle switch end */
+
+  .main--previousQuestion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .main--previousAnswer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }

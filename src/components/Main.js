@@ -23,12 +23,24 @@ export default function Main(){
     const [mistakes, setMistakes] = React.useState(0)
     const [endGameTime, setEndGameTime] = React.useState()
     const [normalMode, setNormalMode] = React.useState(false)
+    const [previousItem, setPreviousItem] = React.useState([])
 
     
 
     React.useEffect(()=>{
         
         if(JSON.parse(completedItem).recipe !== undefined && JSON.parse(completedItem).recipe.length === selectedAnswers.length){
+
+            setPreviousItem(()=>{
+                const item =[]
+                item.push(completedItem)
+                for(let i=0;i<JSON.parse(completedItem).recipe.length;i++){
+                    const recipeItemName = JSON.parse(completedItem).recipe[i]
+                    const recipeItem = itemComponentsData.itemList.filter((item)=> item.name===recipeItemName)[0]
+                    item.push(recipeItem)
+                }
+                return item
+            })
 
             const containsAll = JSON.parse(completedItem).recipe.every(element => {
                 return selectedAnswers.includes(element);
@@ -56,7 +68,7 @@ export default function Main(){
     React.useEffect(()=>{
         if(normalMode && points >  parseInt(localStorage.getItem("recordPoints"))){
             localStorage.setItem("recordPoints", points)
-            setPointsRecord(localStorage.getItem("recordPoints")) //without this state localstorage is updated 1 render too late
+            setPointsRecord(localStorage.getItem("recordPoints"))
         }
     },[points])
 
@@ -184,9 +196,23 @@ export default function Main(){
                          <div className="main--answers">
                             {itemComponentElements}
                         </div> 
-                        <div>
                         
-                        </div>
+                            {previousItem.length !== 0 && !normalMode?
+
+                            <div className="main--previousQuestion">
+                                <h4>Previous answer: </h4>    
+                                <img height="50px" width="50px" src={JSON.parse(previousItem[0]).url} alt="Missing"></img>
+                                <div>
+                                    <img height="50px" width="50px" src={previousItem[1].url} alt="Missing"></img>
+                                    <img height="50px" width="50px" src={previousItem[2].url} alt="Missing"></img>
+                                    {previousItem.length === 4 && <img height="50px" width="50px" src={previousItem[3].url} alt="Missing"></img>}
+                                </div>
+                            </div>
+                            
+                            : 
+                            ""
+                            }     
+                        
                     </React.Fragment>
                     :
                     <div>
