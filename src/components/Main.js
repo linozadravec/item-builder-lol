@@ -156,15 +156,13 @@ export default function Main(){
 
     return (
         <main> 
+
                 <div className='toplayer'>
                     <div className="main--back">
                         {gameStarted && !normalMode && <button onClick={()=>setGameStarted(false)}>Go back</button>}
                     </div>
                     <div>
                         <h3>LoL Item builder</h3>
-                    </div>
-                    <div>
-                        <h3></h3>
                     </div>
                 </div>
                 
@@ -174,12 +172,12 @@ export default function Main(){
                 <div>
                     <p className="main--textCenter">Select mode:</p>
                     <div className="main--toggleSwitch">
-                        <p>Learning</p>
+                        <p className="main--mode">Learning</p>
                         <label className="switch">
                         <input type="checkbox" id="modeCheckBox" checked={normalMode} onChange={changeCheckbox}/>
                         <span className="slider round"></span>
                         </label>
-                        <p>Normal</p>
+                        <p className="main--mode">Normal</p>
                     </div>
                 </div>
                 }
