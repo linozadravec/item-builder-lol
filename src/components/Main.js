@@ -2,6 +2,8 @@ import React from 'react'
 import ItemCompleted from './ItemCompleted'
 import ItemComponent from './ItemComponent'
 import SelectedComponents from './SelectedComponents'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import {nanoid} from "nanoid"
 
 import '../css/main.css'
@@ -157,11 +159,12 @@ export default function Main(){
     return (
         <main> 
 
-                <div className='toplayer'>
+                <div className='main--top'>
                     <div className="main--back">
-                        {gameStarted && !normalMode && <button onClick={()=>setGameStarted(false)}>Go back</button>}
+                        {gameStarted && !normalMode && <FontAwesomeIcon icon={faArrowLeft} color="#D9C241" size="2x" onClick={()=>setGameStarted(false)} />}
                     </div>
                     <div>
+                    
                         <h3>LoL Item builder</h3>
                     </div>
                 </div>
@@ -211,7 +214,7 @@ export default function Main(){
                             {previousItem.length !== 0 && !normalMode?
 
                             <div className="main--previousQuestion">
-                                <h4>Previous answer: </h4>    
+                                <h4 className="main--previousAnswer">Previous answer: </h4>    
                                 <img height="50px" width="50px" src={JSON.parse(previousItem[0]).url} alt="Missing"></img>
                                 <div>
                                     <img height="50px" width="50px" src={previousItem[1].url} alt="Missing"></img>
@@ -229,7 +232,6 @@ export default function Main(){
                     <div className="main--start">
                         {mistakes > 2 ? <h1>Game over</h1> : ""}
                         <button className="main--startBtn" onClick={startGame}>{mistakes > 2 ? "Res" : "S"}tart Game</button>
-                        
                     </div>
                 }
                 <div>

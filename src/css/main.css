@@ -52,6 +52,11 @@ main h3{
     color:#D9C241;
     text-shadow: 0 0 5px black ;
 }
+.main--previousAnswer{
+  font-size:1.25rem;
+  color:#D9C241;
+  text-shadow: 0 0 5px black ;
+}
 
 .question--selected{
     display:flex;
@@ -102,11 +107,11 @@ main h3{
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #D9C241;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #D9C241;
   }
   
   input:checked + .slider:before {
@@ -147,11 +152,8 @@ main h3{
     justify-content: flex-start;
     align-items: center;
   }
-.slm{
-  text-align: center;
-  
-}
-.toplayer{
+
+.main--top{
   display: flex;
   flex-direction: row;
 }
@@ -178,12 +180,60 @@ main h3{
   
 }
 
-.main--startBtn{
-  width: 120px;
-}
+
 
 .main--mode{
   font-size: 24px;
   color:#D9C241;
   text-shadow: 0 0 5px black ;
+}
+
+
+/* CSS */
+.main--startBtn {
+  background-color: #D9C241;
+  border-radius: 12px;
+  color: #000;
+  box-shadow: 0 0 3px black ;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.main--startBtn:not(:disabled):hover,
+.main--startBtn:not(:disabled):focus {
+  outline: 0;
+  background: #e6cf4c;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.main--startBtn:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+
+.itemCompletedBtn,.itemComponentBtn,.itemSelectedBtn, .main--previousQuestion > img{
+  border: solid 3px #C89B3C; 
+}
+
+.itemSelectedBtn:hover{
+  border: none;
+}
+
+.itemComponentBtn:active {
+  box-shadow: 2px 3px 5px black;
+}
+
+.itemComponentBtn:hover{
+  border: none;
 }
