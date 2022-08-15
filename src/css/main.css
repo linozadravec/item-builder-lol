@@ -237,3 +237,13 @@ main h3{
 .itemComponentBtn:hover{
   border: none;
 }
+
+.main--itemPreviousQuestion,.main--itemPreviousAnswer{
+  border: solid 2px #C89B3C;
+}
+.main--itemPreviousQuestion{
+  margin:5px;
+}
+.main--itemPreviousAnswer{
+  margin:2px;
+}

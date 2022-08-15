@@ -215,11 +215,11 @@ export default function Main(){
 
                             <div className="main--previousQuestion">
                                 <h4 className="main--previousAnswer">Previous answer: </h4>    
-                                <img height="50px" width="50px" src={JSON.parse(previousItem[0]).url} alt="Missing"></img>
+                                <img className="main--itemPreviousQuestion" height="50px" width="50px" src={JSON.parse(previousItem[0]).url} alt="Missing"></img>
                                 <div>
-                                    <img height="50px" width="50px" src={previousItem[1].url} alt="Missing"></img>
-                                    <img height="50px" width="50px" src={previousItem[2].url} alt="Missing"></img>
-                                    {previousItem.length === 4 && <img height="50px" width="50px" src={previousItem[3].url} alt="Missing"></img>}
+                                    <img className="main--itemPreviousAnswer" height="50px" width="50px" src={previousItem[1].url} alt="Missing"></img>
+                                    <img className="main--itemPreviousAnswer" height="50px" width="50px" src={previousItem[2].url} alt="Missing"></img>
+                                    {previousItem.length === 4 && <img className="main--itemPreviousAnswer" height="50px" width="50px" src={previousItem[3].url} alt="Missing"></img>}
                                 </div>
                             </div>
                             
