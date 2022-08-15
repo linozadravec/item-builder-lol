@@ -4,6 +4,7 @@ body {
     background-image: linear-gradient(#091428, #1E282D);
     background-size: cover;
     font-family: 'Karla', sans-serif;
+    background-attachment: fixed;
     
 
 }
@@ -48,6 +49,8 @@ main h3{
     justify-content: center;
     align-self: center;
     text-align: center;
+    color:#D9C241;
+    text-shadow: 0 0 5px black ;
 }
 
 .question--selected{
@@ -169,6 +172,10 @@ main h3{
   display: flex;
   flex-direction: column;
   align-items: center;
+  color:#D9C241;
+  text-shadow: 0 0 5px black ;
+
+  
 }
 
 .main--startBtn{

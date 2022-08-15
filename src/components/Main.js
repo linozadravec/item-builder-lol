@@ -172,12 +172,12 @@ export default function Main(){
                 <div>
                     <p className="main--textCenter">Select mode:</p>
                     <div className="main--toggleSwitch">
-                        <p className="main--mode">Learning</p>
+                        <p className="main--mode">&nbsp;&nbsp;Learn&nbsp;</p>
                         <label className="switch">
                         <input type="checkbox" id="modeCheckBox" checked={normalMode} onChange={changeCheckbox}/>
                         <span className="slider round"></span>
                         </label>
-                        <p className="main--mode">Normal</p>
+                        <p className="main--mode">&nbsp;Normal</p>
                     </div>
                 </div>
                 }
@@ -232,7 +232,7 @@ export default function Main(){
                     </div>
                 }
                 <div>
-                    <h3>{points} points / {mistakes} mistakes</h3>
+                    <h3> &nbsp;&nbsp;&nbsp;{points} points / {mistakes} mistakes</h3>
                     {normalMode && <h4 className='main--textCenter'>Record: {pointsRecord ? pointsRecord : 0}</h4>}
                 </div>
         </main>    
