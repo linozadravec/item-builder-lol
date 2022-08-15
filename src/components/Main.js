@@ -192,6 +192,7 @@ export default function Main(){
                                 {normalMode && <Countdown 
                                 date={endGameTime}
                                 onComplete={()=>setGameStarted(false)}
+                                renderer={({ seconds,minutes }) => (<h2>{minutes*60 + seconds}</h2>)}
                                 />}
                                 <div>
                                 <ItemCompleted 
