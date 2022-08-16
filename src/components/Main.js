@@ -51,11 +51,13 @@ export default function Main(){
                 setPoints((prevPoints) => prevPoints+1)
                 setSelectedAnswers([])
                 generateQuestion()
+                playSound("https://cdn.freesound.org/previews/242/242501_4414128-lq.mp3")
               }
               else{
                 setMistakes((prevMistakes) => prevMistakes+1)
                 setSelectedAnswers([])
                 generateQuestion()
+                playSound("https://cdn.freesound.org/previews/572/572936_10182789-lq.mp3")
               }
         }
     },[selectedAnswers])
@@ -122,7 +124,7 @@ export default function Main(){
     }
 
     function selectAnswer(componentName){
-        setSelectedAnswers((prevAnswers)=> [...prevAnswers, componentName])      
+        setSelectedAnswers((prevAnswers)=> [...prevAnswers, componentName])
     }
 
     function removeAnswer(componentName){
@@ -156,9 +158,23 @@ export default function Main(){
         />
     ))
 
+    function playSound(url){
+        var audio = new Audio();
+        audio.src = url
+        audio.volume = 0.2
+        audio.load()
+        const promise = audio.play()
+        if( promise!== undefined){
+            promise.then(()=>{
+            })
+            .catch(error =>{
+                console.log(error)
+            })
+        }
+    }
+
     return (
         <main> 
-
                 <div className='main--top'>
                     <div className="main--back">
                         {gameStarted && !normalMode && <FontAwesomeIcon icon={faArrowLeft} color="#D9C241" size="2x" onClick={()=>setGameStarted(false)} />}
