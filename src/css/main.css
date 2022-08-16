@@ -158,10 +158,9 @@ main h3{
   flex-direction: row;
 }
 
-.main--back{
-  position: relative;
-  left:-350px;
-}
+.main--title{
+  margin: 0px 340px;
+} 
 
 .main--textCenter{
   font-size: 28px;

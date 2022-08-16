@@ -3,8 +3,10 @@ import ItemCompleted from './ItemCompleted'
 import ItemComponent from './ItemComponent'
 import SelectedComponents from './SelectedComponents'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faVolumeMute, faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
 import {nanoid} from "nanoid"
+import successAudio from "../media/sounds/success.mp3"
+import mistakeAudio from "../media/sounds/mistake.mp3"
 
 import '../css/main.css'
 import Countdown from 'react-countdown'
@@ -26,6 +28,7 @@ export default function Main(){
     const [endGameTime, setEndGameTime] = React.useState()
     const [normalMode, setNormalMode] = React.useState(false)
     const [previousItem, setPreviousItem] = React.useState([])
+    const [volume, setVolume] = React.useState(true)
 
     
 
@@ -51,13 +54,19 @@ export default function Main(){
                 setPoints((prevPoints) => prevPoints+1)
                 setSelectedAnswers([])
                 generateQuestion()
-                playSound("https://cdn.freesound.org/previews/242/242501_4414128-lq.mp3")
+                if(volume){
+                    playSound(successAudio)
+                }
+                
               }
               else{
                 setMistakes((prevMistakes) => prevMistakes+1)
                 setSelectedAnswers([])
                 generateQuestion()
-                playSound("https://cdn.freesound.org/previews/572/572936_10182789-lq.mp3")
+                if(volume){
+                    playSound(mistakeAudio)
+                }
+                
               }
         }
     },[selectedAnswers])
@@ -138,6 +147,10 @@ export default function Main(){
         setNormalMode(checkBox.checked)
     }
 
+    function changeVolume(){
+        setVolume(prevVolume => !prevVolume)
+    }
+
     //selectedcomponents saved as only name not object
     const selectedComponentElements= selectedAnswers.map((answer) => {
         return <SelectedComponents
@@ -158,9 +171,9 @@ export default function Main(){
         />
     ))
 
-    function playSound(url){
+    function playSound(source){
         var audio = new Audio();
-        audio.src = url
+        audio.src = source
         audio.volume = 0.2
         audio.load()
         const promise = audio.play()
@@ -176,13 +189,16 @@ export default function Main(){
     return (
         <main> 
                 <div className='main--top'>
-                    <div className="main--back">
-                        {gameStarted && !normalMode && <FontAwesomeIcon icon={faArrowLeft} color="#D9C241" size="2x" onClick={()=>setGameStarted(false)} />}
-                    </div>
-                    <div>
-                    
-                        <h3>LoL Item builder</h3>
-                    </div>
+  
+                    {gameStarted && !normalMode && <FontAwesomeIcon className="flex" icon={faArrowLeft} color="#D9C241" size="2x" onClick={()=>setGameStarted(false)} />}
+
+                    <h3 className="main--title">LoL Item builder</h3>
+
+                    { volume ? 
+                    <FontAwesomeIcon className="main--icon" icon={faVolumeHigh} color="#D9C241" size="2x" onClick={changeVolume} /> 
+                    : 
+                    <FontAwesomeIcon className="main--icon" icon={faVolumeMute} color="#D9C241" size="2x" onClick={changeVolume} />
+                    }
                 </div>
                 
                 {gameStarted ? 
