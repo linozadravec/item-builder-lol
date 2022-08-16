@@ -42,6 +42,10 @@ main h3{
     cursor: pointer;
 }
 
+.donationBtn{
+  margin:0px;
+}
+
 .main--question{
     font-size: 1.5rem;
     display:flex;

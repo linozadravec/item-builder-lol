@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/navbar.css'
+import donateBtn from '../media/images/DonateBtnDark.png'
 
 export default function Nav(){
 
@@ -15,7 +16,7 @@ export default function Nav(){
             <div className="dot"></div>
             </div>
             <div>
-            <button className="donationBtn" onClick={() => openInNewTab("https://ko-fi.com/linodev")}> Buy me a Teemo skin</button>
+                <img src={donateBtn} height="70px" alt="Missing " className="donationBtn" onClick={() => openInNewTab("https://ko-fi.com/linodev")}></img>
             </div>
             
         </nav>
