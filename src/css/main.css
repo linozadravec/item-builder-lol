@@ -5,10 +5,7 @@ body {
     background-size: cover;
     font-family: 'Karla', sans-serif;
     background-attachment: fixed;
-    
-
 }
-
 
 main {
     font-family: 'Inter', sans-serif;
@@ -21,40 +18,73 @@ main {
     max-width: 1300px;
     border-radius: 5px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 50px 250px 100px 250px;
 }
 
-main h3{
-    margin: 0;
-    font-size: 32px;
-    color:#D9C241;
-    text-shadow: 0 0 5px black ;
+.LoLColor{
+  color:#D9C241;
+  text-shadow: 0 0 5px black ;
+}
+
+.main--top{
+  display: grid;
+  grid-template-columns: 75px 950px 75px;
+}
+
+.main--title{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+} 
+
+.main--selectMode{
+  text-align: center;
+  margin: 50px 0px 0px 0px;
+  font-size: 28px;
 }
 
 .main--answers{
     display:flex;
     gap: 20px;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: start;
     cursor: pointer;
 }
 
-.donationBtn{
-  margin:0px;
+.main--question{
+    font-size: 22px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-rows: 75px 100px 75px;
 }
 
-.main--question{
-    font-size: 1.5rem;
+.question--countDown{
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: center;
+}
+
+.question--completedItem{
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.question--selected{
     display:flex;
-    flex-direction: column;
+    margin-bottom: 50px;
+    flex-direction: row;
     justify-content: center;
-    align-self: center;
-    text-align: center;
-    color:#D9C241;
-    text-shadow: 0 0 5px black ;
+    gap:20px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    cursor: pointer;
 }
 .main--previousAnswer{
   font-size:1.25rem;
@@ -62,13 +92,7 @@ main h3{
   text-shadow: 0 0 5px black ;
 }
 
-.question--selected{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap:20px;
-    cursor: pointer;
-}
+
 
 /* The switch - the box around the slider */
 .switch {
@@ -136,7 +160,7 @@ main h3{
   .main--toggleSwitch{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
   }
@@ -144,56 +168,43 @@ main h3{
   /* toggle switch end */
 
   .main--previousQuestion{
+    margin: 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
   }
 
   .main--previousAnswer{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    margin:0;
   }
 
-.main--top{
-  display: flex;
-  flex-direction: row;
-}
-
-.main--title{
-  margin: 0px 340px;
-} 
-
-.main--textCenter{
-  font-size: 28px;
-  text-align: center;
-  color:#D9C241;
-  text-shadow: 0 0 5px black ;
-}
+  
 
 .main--start{
   display: flex;
   flex-direction: column;
+  /* grid-template-rows: 100px 100px; */
   align-items: center;
-  color:#D9C241;
-  text-shadow: 0 0 5px black ;
-
-  
 }
 
-
+.main--gameOver{
+  font-size: 32px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
 
 .main--mode{
   font-size: 24px;
-  color:#D9C241;
-  text-shadow: 0 0 5px black ;
 }
 
 
 /* CSS */
 .main--startBtn {
+  margin: 0px 0px 100px 0px;
   background-color: #D9C241;
   border-radius: 12px;
   color: #000;
@@ -203,13 +214,15 @@ main h3{
   padding: 10px 15px;
   text-align: center;
   transition: 200ms;
-  width: 100%;
+  width: 180px;
   box-sizing: border-box;
   border: 0;
   font-size: 20px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .main--startBtn:not(:disabled):hover,
@@ -227,6 +240,16 @@ main h3{
 
 .itemCompletedBtn,.itemComponentBtn,.itemSelectedBtn, .main--previousQuestion > img{
   border: solid 3px #C89B3C; 
+}
+
+.itemCompletedBtn{
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.itemSelectedBtn{
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 .itemSelectedBtn:hover{
@@ -249,4 +272,32 @@ main h3{
 }
 .main--itemPreviousAnswer{
   margin:2px;
+}
+
+.main--bottom{
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  display:grid;
+  grid-template-rows: 150px 40px 40px;
+  align-items: end;
+  
+
+}
+
+.bottom--pointsMistakes{
+  font-size: 28px;
+  text-align: center;
+  margin: 0 0 20px 0;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.bottom--record{
+  font-size: 24px;
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 20px;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
