@@ -16,7 +16,7 @@ import itemComponentsData from "../ComponentItemsData"
 
 
 export default function Main() {
-    let emptyObjString = JSON.stringify({ "name": "Empty", "id": 0 })
+    let emptyObjString = { "name": "Empty", "id": 0 }
 
     const [gameStarted, setGameStarted] = React.useState(false)
     const [completedItem, setcompletedItem] = React.useState(emptyObjString)
@@ -35,20 +35,20 @@ export default function Main() {
 
     React.useEffect(() => {
 
-        if (JSON.parse(completedItem).recipe !== undefined && JSON.parse(completedItem).recipe.length === selectedAnswers.length) {
+        if (completedItem.recipe !== undefined && completedItem.recipe.length === selectedAnswers.length) {
 
             setPreviousItem(() => {
                 const item = []
                 item.push(completedItem)
-                for (let i = 0; i < JSON.parse(completedItem).recipe.length; i++) {
-                    const recipeItemName = JSON.parse(completedItem).recipe[i]
+                for (let i = 0; i < completedItem.recipe.length; i++) {
+                    const recipeItemName = completedItem.recipe[i]
                     const recipeItem = itemComponentsData.itemList.filter((item) => item.name === recipeItemName)[0]
                     item.push(recipeItem)
                 }
                 return item
             })
 
-            const containsAll = JSON.parse(completedItem).recipe.every(element => {
+            const containsAll = completedItem.recipe.every(element => {
                 return selectedAnswers.includes(element);
             });
             if (containsAll) {
@@ -94,16 +94,18 @@ export default function Main() {
 
     function generateQuestion() {
             
-        const filteredItemsCompletedData = itemsCompletedData.itemList.filter(item => !completedItemHistory.includes(item)) //mby doesnt work because of json
-        const generatedCompletedItem = filteredItemsCompletedData[Math.floor(Math.random() * itemsCompletedData.itemList.length)]
-        setcompletedItem(JSON.stringify(generatedCompletedItem))
+        const filteredItemsCompletedData = itemsCompletedData.itemList.filter(item => !completedItemHistory.includes(item))
+        const generatedCompletedItem = filteredItemsCompletedData[Math.floor(Math.random() * filteredItemsCompletedData.length)]
+        setcompletedItem(generatedCompletedItem)
 
         if(completedItemHistory.length < 20){
-            setCompletedItemHistory(prevHistory => [...prevHistory, JSON.stringify(generatedCompletedItem)])
+            setCompletedItemHistory(prevHistory => [...prevHistory, generatedCompletedItem])
         }
         else{
-            setCompletedItemHistory(prevHistory => [...prevHistory.slice(1), JSON.stringify(generatedCompletedItem)])
+            setCompletedItemHistory(prevHistory => [...prevHistory.slice(1), generatedCompletedItem])
         }
+        console.log("Filtered",filteredItemsCompletedData)
+        console.log("History",completedItemHistory)
 
         const recipe = generatedCompletedItem.recipe
         setItemComponents(() => {
@@ -273,7 +275,7 @@ export default function Main() {
 
                     <div className="main--previousQuestion">
                         <h4 className="main--previousAnswer">Previous answer: </h4>
-                        <img className="main--itemPreviousQuestion" height="50px" width="50px" src={JSON.parse(previousItem[0]).url} alt="Missing"></img>
+                        <img className="main--itemPreviousQuestion" height="50px" width="50px" src={previousItem[0].url} alt="Missing"></img>
                         <div>
                             <img className="main--itemPreviousAnswer" height="50px" width="50px" src={previousItem[1].url} alt="Missing"></img>
                             <img className="main--itemPreviousAnswer" height="50px" width="50px" src={previousItem[2].url} alt="Missing"></img>
@@ -284,7 +286,7 @@ export default function Main() {
                     ""
                 }
 
-                <h3 class="bottom--pointsMistakes LoLColor"> &nbsp;&nbsp;&nbsp;{points} points / {mistakes} mistakes</h3>
+                <h3 className="bottom--pointsMistakes LoLColor"> &nbsp;&nbsp;&nbsp;{points} points / {mistakes} mistakes</h3>
                 {normalMode && <h4 className='bottom--record LoLColor'>Record: {pointsRecord ? pointsRecord : 0}</h4>}
             </div>
         </main>
