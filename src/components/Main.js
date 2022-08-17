@@ -20,6 +20,7 @@ export default function Main() {
 
     const [gameStarted, setGameStarted] = React.useState(false)
     const [completedItem, setcompletedItem] = React.useState(emptyObjString)
+    const [completedItemHistory, setCompletedItemHistory] = React.useState([])
     const [itemComponents, setItemComponents] = React.useState([emptyObjString])
     const [selectedAnswers, setSelectedAnswers] = React.useState([])
     const [points, setPoints] = React.useState(0)
@@ -92,8 +93,17 @@ export default function Main() {
     }, [mistakes])
 
     function generateQuestion() {
-        const generatedCompletedItem = itemsCompletedData.itemList[Math.floor(Math.random() * itemsCompletedData.itemList.length)]
+            
+        const filteredItemsCompletedData = itemsCompletedData.itemList.filter(item => !completedItemHistory.includes(item)) //mby doesnt work because of json
+        const generatedCompletedItem = filteredItemsCompletedData[Math.floor(Math.random() * itemsCompletedData.itemList.length)]
         setcompletedItem(JSON.stringify(generatedCompletedItem))
+
+        if(completedItemHistory.length < 20){
+            setCompletedItemHistory(prevHistory => [...prevHistory, JSON.stringify(generatedCompletedItem)])
+        }
+        else{
+            setCompletedItemHistory(prevHistory => [...prevHistory.slice(1), JSON.stringify(generatedCompletedItem)])
+        }
 
         const recipe = generatedCompletedItem.recipe
         setItemComponents(() => {
@@ -101,23 +111,28 @@ export default function Main() {
 
             //Izvrsava se 2 put 
             // Possible promijeniti da itemi ne budu duplikati
+            let uniqueNumbers = generateUniqueNumbers(6, itemComponentsData.itemList.length)
+
             for (let i = 0; i < 6; i++) { //broj komponenti u odgovoru je iMax
-                arrayComponents.push(itemComponentsData.itemList[Math.floor(Math.random() * itemComponentsData.itemList.length)])
+                arrayComponents.push(itemComponentsData.itemList[uniqueNumbers[i]])
             }
 
-            const uniqueNumbers = generateUniqueNumbers(recipe.length)
+            uniqueNumbers = generateUniqueNumbers(recipe.length, 6)
 
             for (let i = 0; i < recipe.length; i++) {
-                arrayComponents[uniqueNumbers[i]] = itemComponentsData.itemList.filter((item) => item.name === recipe[i])[0] //broj komponenti u odgovoru je '*6'
+                let recipeItem = itemComponentsData.itemList.filter((item) => item.name === recipe[i])[0]
+                if(!arrayComponents.includes(recipeItem)){
+                    arrayComponents[uniqueNumbers[i]] = recipeItem
+                }
             }
             return arrayComponents
         })
     }
 
-    function generateUniqueNumbers(n) {
+    function generateUniqueNumbers(amount, maxNum) {
         var arr = [];
-        while (arr.length < n) {
-            var r = Math.floor(Math.random() * 6); //broj komponenti
+        while (arr.length < amount) {
+            var r = Math.floor(Math.random() * maxNum); //broj komponenti
             if (arr.indexOf(r) === -1) arr.push(r);
         }
         return arr
