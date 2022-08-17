@@ -59,7 +59,8 @@ nav {
 
 .donationBtn{
   position: relative;
-  top: -18px;
+  top: -20px;
+  right: -10px;
   cursor: pointer;
   float:right;
 }
