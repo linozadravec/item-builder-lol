@@ -1,10 +1,8 @@
 body {
     margin: 0;
-    background-color: #091428;
-    background-image: linear-gradient(#091428, #1E282D);
-    background-size: cover;
+
     font-family: 'Karla', sans-serif;
-    background-attachment: fixed;
+    background: url(../media/images/Background.jpg) no-repeat center center fixed;
 }
 
 main {
