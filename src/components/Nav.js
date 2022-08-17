@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/navbar.css'
-import donateBtn from '../media/images/DonateBtnDark.png'
+import donateBtn from '../media/images/LINO.svg'
 
 export default function Nav(){
 
