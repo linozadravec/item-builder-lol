@@ -104,28 +104,30 @@ export default function Main() {
         else{
             setCompletedItemHistory(prevHistory => [...prevHistory.slice(1), generatedCompletedItem])
         }
-        console.log("Filtered",filteredItemsCompletedData)
-        console.log("History",completedItemHistory)
 
         const recipe = generatedCompletedItem.recipe
         setItemComponents(() => {
             const arrayComponents = []
+            let filteredItemComponentsData= []
+            //Runs 2 times?
+            if(recipe.length === 2){
+                filteredItemComponentsData = itemComponentsData.itemList.filter((item) => !(item.name === recipe[0] || item.name === recipe[1]))
+            }
+            else{
+                filteredItemComponentsData = itemComponentsData.itemList.filter((item) => !(item.name === recipe[0] || item.name === recipe[1] || item.name === recipe[2] ))
+            }
+            
+            let uniqueNumbers = generateUniqueNumbers(6, filteredItemComponentsData.length)
 
-            //Izvrsava se 2 put 
-            // Possible promijeniti da itemi ne budu duplikati
-            let uniqueNumbers = generateUniqueNumbers(6, itemComponentsData.itemList.length)
-
-            for (let i = 0; i < 6; i++) { //broj komponenti u odgovoru je iMax
-                arrayComponents.push(itemComponentsData.itemList[uniqueNumbers[i]])
+            for (let i = 0; i < 6; i++) { 
+                arrayComponents.push(filteredItemComponentsData[uniqueNumbers[i]])
             }
 
             uniqueNumbers = generateUniqueNumbers(recipe.length, 6)
 
             for (let i = 0; i < recipe.length; i++) {
                 let recipeItem = itemComponentsData.itemList.filter((item) => item.name === recipe[i])[0]
-                if(!arrayComponents.includes(recipeItem)){
-                    arrayComponents[uniqueNumbers[i]] = recipeItem
-                }
+                arrayComponents[uniqueNumbers[i]] = recipeItem
             }
             return arrayComponents
         })
@@ -134,7 +136,7 @@ export default function Main() {
     function generateUniqueNumbers(amount, maxNum) {
         var arr = [];
         while (arr.length < amount) {
-            var r = Math.floor(Math.random() * maxNum); //broj komponenti
+            var r = Math.floor(Math.random() * maxNum);
             if (arr.indexOf(r) === -1) arr.push(r);
         }
         return arr
