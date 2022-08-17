@@ -17,7 +17,7 @@ main {
     width: 1100px;
     max-width: 1300px;
     border-radius: 5px;
-    padding: 20px;
+    padding-top: 10px;
     display: grid;
     grid-template-rows: 50px 250px 100px 250px;
 }
@@ -32,6 +32,10 @@ main {
   grid-template-columns: 75px 950px 75px;
 }
 
+.top--backIcon{
+  margin-left: 25px;
+}
+
 .main--title{
   grid-column-start: 2;
   grid-column-end: 3;
@@ -42,7 +46,7 @@ main {
 
 .main--selectMode{
   text-align: center;
-  margin: 50px 0px 0px 0px;
+  margin: 125px 0px 0px 0px;
   font-size: 28px;
 }
 
@@ -205,6 +209,7 @@ main {
 /* CSS */
 .main--startBtn {
   margin: 0px 0px 100px 0px;
+  z-index: 999;
   background-color: #D9C241;
   border-radius: 12px;
   color: #000;
@@ -214,10 +219,10 @@ main {
   padding: 10px 15px;
   text-align: center;
   transition: 200ms;
-  width: 180px;
+  width: 250px;
   box-sizing: border-box;
   border: 0;
-  font-size: 20px;
+  font-size: 32px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;

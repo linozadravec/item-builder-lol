@@ -190,7 +190,7 @@ export default function Main() {
         <main>
             <div className='main--top'>
 
-                {gameStarted && !normalMode && <FontAwesomeIcon className="flex" icon={faArrowLeft} color="#D9C241" size="2x" onClick={() => setGameStarted(false)} />}
+                {gameStarted && !normalMode && <FontAwesomeIcon className="top--backIcon" icon={faArrowLeft} color="#D9C241" size="2x" onClick={() => setGameStarted(false)} />}
 
                 <h3 className="main--title LoLColor">LoL Item builder</h3>
 
