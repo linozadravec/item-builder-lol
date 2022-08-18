@@ -55,6 +55,7 @@ export default function Main() {
                 setPoints((prevPoints) => prevPoints + 1)
                 setSelectedAnswers([])
                 generateQuestion()
+                setEndGameTime(prevTime => prevTime + 1000)
                 if (volume) {
                     playSound(successAudio)
                 }
@@ -147,7 +148,7 @@ export default function Main() {
         setSelectedAnswers([])
         setMistakes(0)
         setPoints(0)
-        setEndGameTime(Date.now() + 60000)
+        setEndGameTime(Date.now() + 45000)
         setGameStarted(true)
     }
 
