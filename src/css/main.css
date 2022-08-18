@@ -244,9 +244,11 @@ main {
 
 .itemCompletedBtn,.itemComponentBtn,.itemSelectedBtn, .main--previousQuestion > img{
   border: solid 3px #C89B3C; 
+  -webkit-user-drag: none;
 }
 
 .itemCompletedBtn{
+  
   grid-row-start: 2;
   grid-row-end: 3;
 }
@@ -268,14 +270,14 @@ main {
   border: none;
 }
 
-.main--itemPreviousQuestion,.main--itemPreviousAnswer{
-  border: solid 2px #C89B3C;
-}
 .main--itemPreviousQuestion{
   margin:5px;
 }
+
 .main--itemPreviousAnswer{
+  border: solid 2px #C89B3C;
   margin:2px;
+  -webkit-user-drag: none;
 }
 
 .main--bottom{
