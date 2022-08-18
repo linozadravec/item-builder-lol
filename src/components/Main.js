@@ -156,8 +156,9 @@ export default function Main() {
     }
 
     function removeAnswer(componentName) {
+        const itemIndex = selectedAnswers.findIndex(item => item === componentName); //Otherwise removes both same-named items
         setSelectedAnswers((prevAnswers) => {
-            return prevAnswers.filter((answer) => answer !== componentName)
+            return prevAnswers.filter((answer, index) => index !== itemIndex)
         })
     }
 
