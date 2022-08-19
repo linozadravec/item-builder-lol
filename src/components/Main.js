@@ -213,17 +213,19 @@ export default function Main() {
     return (
         <main>
             <div className='main--top'>
-
-                {gameStarted && !normalMode && <FontAwesomeIcon className="top--backIcon" icon={faArrowLeft} color="#D9C241" size="2x" onClick={() => setGameStarted(false)} />}
                 <div>
+                    {gameStarted && !normalMode && <FontAwesomeIcon className="top--backIcon" icon={faArrowLeft} color="#D9C241" size="2x" onClick={() => setGameStarted(false)} />}
+                    
                     {!gameStarted && <FontAwesomeIcon className="top--infoIcon" icon={faInfoCircle} color="#D9C241" size="2x" onMouseEnter={()=>setShowInfo(true)} onMouseLeave={()=>setShowInfo(false)} />}
-                    {!gameStarted && showInfo && <div className="top--infoBubble LoLColor">
+                    {!gameStarted && showInfo && 
+                    <div className="top--infoBubble LoLColor">
                         <p> - Score points by guessing the recipe of items</p>
                         <p> - Play learn mode to learn item recipes</p>
                         <p> - Play normal mode to race against the timer</p>
                         <p> - Correct answers in normal mode grant bonus time</p>
                         <p> - Three incorrect answers in normal mode is game over</p>
-                    </div>}
+                    </div>
+                    }
                 </div>
                 <h3 className="main--title LoLColor">LoL Item builder</h3>
 
