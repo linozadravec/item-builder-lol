@@ -117,6 +117,7 @@ export default function Main() {
             else{
                 filteredItemComponentsData = itemComponentsData.itemList.filter((item) => !(item.name === recipe[0] || item.name === recipe[1] || item.name === recipe[2] ))
             }
+            console.log(filteredItemComponentsData)
             
             let uniqueNumbers = generateUniqueNumbers(6, filteredItemComponentsData.length)
 
@@ -124,10 +125,11 @@ export default function Main() {
                 arrayComponents.push(filteredItemComponentsData[uniqueNumbers[i]])
             }
 
+            const uniqueRecipe = [...new Set(recipe)]
             uniqueNumbers = generateUniqueNumbers(recipe.length, 6)
 
-            for (let i = 0; i < recipe.length; i++) {
-                let recipeItem = itemComponentsData.itemList.filter((item) => item.name === recipe[i])[0]
+            for (let i = 0; i < uniqueRecipe.length; i++) {
+                let recipeItem = itemComponentsData.itemList.filter((item) => item.name === uniqueRecipe[i])[0]
                 arrayComponents[uniqueNumbers[i]] = recipeItem
             }
             return arrayComponents
