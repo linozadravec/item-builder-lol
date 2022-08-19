@@ -219,11 +219,15 @@ export default function Main() {
                     {!gameStarted && <FontAwesomeIcon className="top--infoIcon" icon={faInfoCircle} color="#D9C241" size="2x" onMouseEnter={()=>setShowInfo(true)} onMouseLeave={()=>setShowInfo(false)} />}
                     {!gameStarted && showInfo && 
                     <div className="top--infoBubble LoLColor">
-                        <p> - Score points by guessing the recipe of items</p>
-                        <p> - Play learn mode to learn item recipes</p>
-                        <p> - Play normal mode to race against the timer</p>
-                        <p> - Correct answers in normal mode grant bonus time</p>
-                        <p> - Three incorrect answers in normal mode is game over</p>
+                        <h4> Score points by guessing the recipe of items</h4>
+                        <h3>Learn mode</h3>
+                        <p> - Play to learn recipes</p>
+                        <p> - Recipes are shown after trying</p>
+                        <h3>Normal mode</h3>
+                        <p> - Play to race against the timer and compete with friends</p>
+                        <p> - Correct answers grant bonus time </p>
+                        <p> - Three mistakes = Game Over </p>
+                        <h4> You can remove selected items by clicking on them</h4>
                     </div>
                     }
                 </div>

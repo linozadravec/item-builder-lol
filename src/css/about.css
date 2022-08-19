@@ -20,8 +20,12 @@
 .about--text{
     font-size: 22px;
 }
-
-
+a{
+    color: #D9C241;
+}
+a:hover{
+    color: #D9C241;
+}
 
 a:visited{
     color: #D9C241;

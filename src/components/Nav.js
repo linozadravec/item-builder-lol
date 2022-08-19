@@ -26,11 +26,8 @@ export default function Nav(){
                         <Link to="/">Play</Link>
                     </li>
                     <li>
-                        <Link to="/test">Tbd</Link>
-                    </li>
-                    <li>
                         <Link to="/about">About</Link>
-                    </li>  
+                    </li> 
                 </ul>
             </div>
             <div>
