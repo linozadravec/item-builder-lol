@@ -3,7 +3,7 @@ import ItemCompleted from './ItemCompleted'
 import ItemComponent from './ItemComponent'
 import SelectedComponents from './SelectedComponents'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faVolumeMute, faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faVolumeMute, faVolumeHigh, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { nanoid } from "nanoid"
 import successAudio from "../media/sounds/success.mp3"
 import mistakeAudio from "../media/sounds/mistake.mp3"
@@ -30,6 +30,7 @@ export default function Main() {
     const [normalMode, setNormalMode] = React.useState(false)
     const [previousItem, setPreviousItem] = React.useState([])
     const [volume, setVolume] = React.useState(true)
+    const [showInfo, setShowInfo] = React.useState(false)
 
 
 
@@ -117,7 +118,6 @@ export default function Main() {
             else{
                 filteredItemComponentsData = itemComponentsData.itemList.filter((item) => !(item.name === recipe[0] || item.name === recipe[1] || item.name === recipe[2] ))
             }
-            console.log(filteredItemComponentsData)
             
             let uniqueNumbers = generateUniqueNumbers(6, filteredItemComponentsData.length)
 
@@ -208,13 +208,23 @@ export default function Main() {
                 })
         }
     }
+    console.log(showInfo)
 
     return (
         <main>
             <div className='main--top'>
 
                 {gameStarted && !normalMode && <FontAwesomeIcon className="top--backIcon" icon={faArrowLeft} color="#D9C241" size="2x" onClick={() => setGameStarted(false)} />}
-
+                <div>
+                    {!gameStarted && <FontAwesomeIcon className="top--infoIcon" icon={faInfoCircle} color="#D9C241" size="2x" onMouseEnter={()=>setShowInfo(true)} onMouseLeave={()=>setShowInfo(false)} />}
+                    {!gameStarted && showInfo && <div className="top--infoBubble LoLColor">
+                        <p> - Score points by guessing the recipe of items</p>
+                        <p> - Play learn mode to learn item recipes</p>
+                        <p> - Play normal mode to race against the timer</p>
+                        <p> - Correct answers in normal mode grant bonus time</p>
+                        <p> - Three incorrect answers in normal mode is game over</p>
+                    </div>}
+                </div>
                 <h3 className="main--title LoLColor">LoL Item builder</h3>
 
                 {volume ?

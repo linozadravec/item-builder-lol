@@ -16,7 +16,7 @@ main {
     width: 1100px;
     max-width: 1300px;
     border-radius: 5px;
-    padding-top: 10px;
+    padding-top: 15px;
     display: grid;
     grid-template-rows: 50px 250px 100px 250px;
 }
@@ -28,11 +28,31 @@ main {
 
 .main--top{
   display: grid;
+  align-items: top;
   grid-template-columns: 75px 950px 75px;
 }
 
 .top--backIcon{
-  margin-left: 25px;
+  margin-left: 20px;
+}
+
+.top--infoIcon{
+  margin-left: 20px;
+}
+
+.top--infoBubble{
+  position:relative;
+  left:50px;
+  top:20px;
+  padding:20px;
+  width: 300px;
+  height: 350px;
+  border: 3px solid #D9C241;
+  border-radius: 10px;
+  background-color: rgba(9,20,40,.50);
+  z-index: 999;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .main--title{
@@ -213,7 +233,7 @@ main {
 /* CSS */
 .main--startBtn {
   margin: 0px 0px 100px 0px;
-  z-index: 999;
+  z-index: 99;
   background-color: #D9C241;
   border-radius: 12px;
   color: #000;
