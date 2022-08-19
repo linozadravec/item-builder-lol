@@ -3,27 +3,37 @@
 }
 
 nav {
-  padding: 100px;
   height: 70px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 36px;
   box-shadow: 0px 2.98256px 7.4564px rgba(205, 250, 250, 0.2);
   background-color: #091428;
+}
+li {
+  display: inline;
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 10px;
+  width: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
 }
 
 .navMenu a {
   color: #f6f4e6;
   text-decoration: none;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  display: inline-block;
-  width: 80px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
+  display: block;
+  padding: 8px;
 
+}
+.navMenu a:visited {
+  color: #f6f4e6;
+}
 .navMenu a:hover {
   color: #C89B3C;
 }
@@ -59,8 +69,7 @@ nav {
 
 .donationBtn{
   position: relative;
-  top: -20px;
-  right: -10px;
+  right: 10px;
   cursor: pointer;
   float:right;
 }
