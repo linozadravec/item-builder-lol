@@ -4,7 +4,7 @@ const itemsData = {
         {
             "name": "Aegis of the Legion",
             "id": 3105,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/2/22/Aegis_of_the_Legion_item.png",
+            "url": "Aegis_of_the_Legion_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -26,7 +26,7 @@ const itemsData = {
         {
             "name": "Aether Wisp",
             "id": 3113,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/c/cd/Aether_Wisp_item.png",
+            "url": "Aether_Wisp_item.png",
             "nickname": ["spooky ghost"],
             "tier": 2,
             "maps": {
@@ -54,7 +54,7 @@ const itemsData = {
         {
             "name": "Amplifying Tome",
             "id": 1052,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/b/b9/Amplifying_Tome_item.png",
+            "url": "Amplifying_Tome_item.png",
             "nickname": ["amptome", "book"],
             "tier": 1,
             "maps": {
@@ -74,7 +74,7 @@ const itemsData = {
         {
             "name": "B. F. Sword",
             "id": 1038,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/a/ab/B._F._Sword_item.png",
+            "url": "B._F._Sword_item.png",
             "nickname": ["bf"],
             "tier": 1,
             "maps": {
@@ -95,7 +95,7 @@ const itemsData = {
         {
             "name": "Bami's Cinder",
             "id": 6660,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/d/d9/Bami%27s_Cinder_item.png",
+            "url": "Bami's_Cinder_item.png",
             "nickname": ["fire"],
             "tier": 2,
             "maps": {
@@ -122,7 +122,7 @@ const itemsData = {
         {
             "name": "Bandleglass Mirror",
             "id": 4642,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/d/dd/Bandleglass_Mirror_item.png",
+            "url": "Bandleglass_Mirror_item.png",
             "nickname": ["yordle"],
             "tier": 2,
             "maps": {
@@ -144,7 +144,7 @@ const itemsData = {
         {
             "name": "Blasting Wand",
             "id": 1026,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/3/3b/Blasting_Wand_item.png",
+            "url": "Blasting_Wand_item.png",
             "tier": 1,
             "maps": {
                 "sr": true,
@@ -163,7 +163,7 @@ const itemsData = {
         {
             "name": "Blighting Jewel",
             "id": 4630,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/5/52/Blighting_Jewel_item.png",
+            "url": "Blighting_Jewel_item.png",
             "nickname": ["purple"],
             "tier": 2,
             "itemlimit": "Void Pen",
@@ -185,7 +185,7 @@ const itemsData = {
         {
             "name": "Bramble Vest",
             "id": 3076,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/a/af/Bramble_Vest_item.png",
+            "url": "Bramble_Vest_item.png",
             "nickname": ["grievous wounds"],
             "tier": 2,
             "maps": {
@@ -212,7 +212,7 @@ const itemsData = {
         {
             "name": "Caulfield's Warhammer",
             "id": 3133,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/2/29/Caulfield%27s_Warhammer_item.png",
+            "url": "Caulfield's_Warhammer_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -234,7 +234,7 @@ const itemsData = {
         {
             "name": "Chain Vest",
             "id": 1031,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/8/89/Chain_Vest_item.png",
+            "url": "Chain_Vest_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -256,7 +256,7 @@ const itemsData = {
         {
             "name": "Cloak of Agility",
             "id": 1018,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/3/3e/Cloak_of_Agility_item.png",
+            "url": "Cloak_of_Agility_item.png",
             "tier": 1,
             "maps": {
                 "sr": true,
@@ -274,7 +274,7 @@ const itemsData = {
         {
             "name": "Cloth Armor",
             "id": 1029,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/6/6f/Cloth_Armor_item.png",
+            "url": "Cloth_Armor_item.png",
             "tier": 1,
             "maps": {
                 "sr": true,
@@ -297,7 +297,7 @@ const itemsData = {
         {
             "name": "Crystalline Bracer",
             "id": 3801,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/f/f1/Crystalline_Bracer_item.png",
+            "url": "Crystalline_Bracer_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -318,7 +318,7 @@ const itemsData = {
         {
             "name": "Dagger",
             "id": 1042,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/7/7e/Dagger_item.png",
+            "url": "Dagger_item.png",
             "tier": 1,
             "maps": {
                 "sr": true,
@@ -338,7 +338,7 @@ const itemsData = {
         {
             "name": "Executioner's Calling",
             "id": 3123,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/3/3d/Executioner%27s_Calling_item.png",
+            "url": "Executioner's_Calling_item.png",
             "nickname": ["grievous"],
             "tier": 2,
             "maps": {
@@ -367,7 +367,7 @@ const itemsData = {
         {
             "name": "Fiendish Codex",
             "id": 3108,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Fiendish_Codex_item.png",
+            "url": "Fiendish_Codex_item.png",
             "nickname": ["book"],
             "tier": 2,
             "maps": {
@@ -388,7 +388,7 @@ const itemsData = {
         {
             "name": "Forbidden Idol",
             "id": 3114,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/a/ae/Forbidden_Idol_item.png",
+            "url": "Forbidden_Idol_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -408,7 +408,7 @@ const itemsData = {
         {
             "name": "Giant's Belt",
             "id": 1011,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/6/68/Giant%27s_Belt_item.png",
+            "url": "Giant's_Belt_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -429,7 +429,7 @@ const itemsData = {
         {
             "name": "Glacial Buckler",
             "id": 3024,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/b/b9/Glacial_Buckler_item.png",
+            "url": "Glacial_Buckler_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -451,7 +451,7 @@ const itemsData = {
         {
             "name": "Hearthbound Axe",
             "id": 3051,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/1/11/Hearthbound_Axe_item.png",
+            "url": "Hearthbound_Axe_item.png",
             "nickname": ["blue arrow"],
             "tier": 2,
             "maps": {
@@ -480,7 +480,7 @@ const itemsData = {
         {
             "name": "Hexdrinker",
             "id": 3155,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/4/4d/Hexdrinker_item.png",
+            "url": "Hexdrinker_item.png",
             "tier": 2,
             "itemlimit": "Lifeline",
             "maps": {
@@ -511,7 +511,7 @@ const itemsData = {
         {
             "name": "Hextech Alternator",
             "id": 3145,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/b/bc/Hextech_Alternator_item.png",
+            "url": "Hextech_Alternator_item.png",
             "nickname": ["revolver"],
             "tier": 2,
             "maps": {
@@ -540,7 +540,7 @@ const itemsData = {
         {
             "name": "Ironspike Whip",
             "id": 6029,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/c/c5/Ironspike_Whip_item.png",
+            "url": "Ironspike_Whip_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -567,7 +567,7 @@ const itemsData = {
         {
             "name": "Kindlegem",
             "id": 3067,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/b/b8/Kindlegem_item.png",
+            "url": "Kindlegem_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -592,7 +592,7 @@ const itemsData = {
         {
             "name": "Kircheis Shard",
             "id": 2015,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/d/d1/Kircheis_Shard_item.png",
+            "url": "Kircheis_Shard_item.png",
             "tags": ["HasOnHit", "HasOnAttack"],
             "tier": 2,
             "maps": {
@@ -624,7 +624,7 @@ const itemsData = {
         {
             "name": "Last Whisper",
             "id": 3035,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/b/ba/Last_Whisper_item.png",
+            "url": "Last_Whisper_item.png",
             "nickname": ["lw"],
             "tier": 2,
             "itemlimit": "Last Whisper",
@@ -648,7 +648,7 @@ const itemsData = {
         {
             "name": "Leeching Leer",
             "id": 4635,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/f/fe/Leeching_Leer_item.png",
+            "url": "Leeching_Leer_item.png",
             "nickname": ["wota", "catalyst"],
             "tier": 2,
             "maps": {
@@ -670,7 +670,7 @@ const itemsData = {
         {
             "name": "Long Sword",
             "id": 1036,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/6/64/Long_Sword_item.png",
+            "url": "Long_Sword_item.png",
             "tier": 1,
             "maps": {
                 "sr": true,
@@ -690,7 +690,7 @@ const itemsData = {
         {
             "name": "Lost Chapter",
             "id": 3802,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/3/31/Lost_Chapter_item.png",
+            "url": "Lost_Chapter_item.png",
             "nickname": ["book"],
             "tier": 2,
             "maps": {
@@ -719,7 +719,7 @@ const itemsData = {
         {
             "name": "Needlessly Large Rod",
             "id": 1058,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/1/13/Needlessly_Large_Rod_item.png",
+            "url": "Needlessly_Large_Rod_item.png",
             "nickname": ["nlr"],
             "tier": 1,
             "maps": {
@@ -738,7 +738,7 @@ const itemsData = {
         {
             "name": "Negatron Cloak",
             "id": 1057,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/f/ff/Negatron_Cloak_item.png",
+            "url": "Negatron_Cloak_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -759,7 +759,7 @@ const itemsData = {
         {
             "name": "Noonquiver",
             "id": 6670,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/6/68/Noonquiver_item.png",
+            "url": "Noonquiver_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -786,7 +786,7 @@ const itemsData = {
         {
             "name": "Null-Magic Mantle",
             "id": 1033,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/2/2a/Null-Magic_Mantle_item.png",
+            "url": "Null-Magic_Mantle_item.png",
             "tier": 1,
             "maps": {
                 "sr": true,
@@ -809,7 +809,7 @@ const itemsData = {
         {
             "name": "Oblivion Orb",
             "id": 3916,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/8/86/Oblivion_Orb_item.png",
+            "url": "Oblivion_Orb_item.png",
             "nickname": ["grievous"],
             "tier": 2,
             "maps": {
@@ -837,7 +837,7 @@ const itemsData = {
         {
             "name": "Phage",
             "id": 3044,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/2/28/Phage_item.png",
+            "url": "Phage_item.png",
             "nickname": ["mallet"],
             "tier": 2,
             "maps": {
@@ -866,7 +866,7 @@ const itemsData = {
         {
             "name": "Pickaxe",
             "id": 1037,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/3/3b/Pickaxe_item.png",
+            "url": "Pickaxe_item.png",
             "tier": 1,
             "maps": {
                 "sr": true,
@@ -886,7 +886,7 @@ const itemsData = {
         {
             "name": "Quicksilver Sash",
             "id": 3140,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/f/f9/Quicksilver_Sash_item.png",
+            "url": "Quicksilver_Sash_item.png",
             "nickname": ["qss"],
             "tier": 2,
             "itemlimit": "Quicksilver",
@@ -917,7 +917,7 @@ const itemsData = {
         {
             "name": "Rageknife",
             "id": 6677,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/f/ff/Rageknife_item.png",
+            "url": "Rageknife_item.png",
             "nickname": ["angry"],
             "tags": ["HasOnHit", "OnHitAppliesLifeSteal"],
             "tier": 2,
@@ -948,7 +948,7 @@ const itemsData = {
         {
             "name": "Recurve Bow",
             "id": 1043,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/8/8e/Recurve_Bow_item.png",
+            "url": "Recurve_Bow_item.png",
             "tags": ["HasOnHit", "OnHitAppliesLifeSteal"],
             "tier": 2,
             "maps": {
@@ -977,7 +977,7 @@ const itemsData = {
         {
             "name": "Rejuvenation Bead",
             "id": 1006,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/0/0f/Rejuvenation_Bead_item.png",
+            "url": "Rejuvenation_Bead_item.png",
             "tier": 1,
             "maps": {
                 "sr": true,
@@ -996,7 +996,7 @@ const itemsData = {
         {
             "name": "Ruby Crystal",
             "id": 1028,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/8/82/Ruby_Crystal_item.png",
+            "url": "Ruby_Crystal_item.png",
             "nickname": ["red"],
             "tier": 1,
             "maps": {
@@ -1020,7 +1020,7 @@ const itemsData = {
         {
             "name": "Seeker's Armguard",
             "id": 3191,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/7/78/Seeker%27s_Armguard_item.png",
+            "url": "Seeker's_Armguard_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -1047,7 +1047,7 @@ const itemsData = {
         {
             "name": "Serrated Dirk",
             "id": 3134,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/c/c2/Serrated_Dirk_item.png",
+            "url": "Serrated_Dirk_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -1074,7 +1074,7 @@ const itemsData = {
         {
             "name": "Sheen",
             "id": 3057,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/c/c6/Sheen_item.png",
+            "url": "Sheen_item.png",
             "nickname": ["jimmy neutron"],
             "tags": ["HasOnHit", "OnHitAppliesLifeSteal"],
             "tier": 1,
@@ -1102,7 +1102,7 @@ const itemsData = {
         {
             "name": "Spectre's Cowl",
             "id": 3211,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/1/10/Spectre%27s_Cowl_item.png",
+            "url": "Spectre's_Cowl_item.png",
             "nickname": ["hat", "ghost"],
             "tier": 2,
             "maps": {
@@ -1130,7 +1130,7 @@ const itemsData = {
         {
             "name": "Stopwatch",
             "id": 2420,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/e/e6/Stopwatch_item.png",
+            "url": "Stopwatch_item.png",
             "nickname": ["zhg", "zonyas", "zhonyas"],
             "tier": 1,
             "limit": "Cannot be purchased while owning {{ii|Guardian Angel}} or {{ii|Zhonya's Hourglass}}. Transforms into {{ii|Broken Stopwatch}} when activated, which cannot be activated again. Once broken, all future purchases are also broken. Limited to 1 '''Stopwatch'''.",
@@ -1158,7 +1158,7 @@ const itemsData = {
         {
             "name": "Tear of the Goddess",
             "id": 3070,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/2/2b/Tear_of_the_Goddess_item.png",
+            "url": "Tear_of_the_Goddess_item.png",
             "tier": 1,
             "type": ["Starter"],
             "itemlimit": "Mana Charge",
@@ -1192,7 +1192,7 @@ const itemsData = {
         {
             "name": "Tiamat",
             "id": 3077,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/e/e3/Tiamat_item.png",
+            "url": "Tiamat_item.png",
             "tier": 2,
             "itemlimit": "Hydra",
             "maps": {
@@ -1220,7 +1220,7 @@ const itemsData = {
         {
             "name": "Vampiric Scepter",
             "id": 1053,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/e/ec/Vampiric_Scepter_item.png",
+            "url": "Vampiric_Scepter_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -1242,7 +1242,7 @@ const itemsData = {
         {
             "name": "Verdant Barrier",
             "id": 4632,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/4/45/Verdant_Barrier_item.png",
+            "url": "Verdant_Barrier_item.png",
             "nickname": ["necklace"],
             "tier": 2,
             "maps": {
@@ -1270,7 +1270,7 @@ const itemsData = {
         {
             "name": "Warden's Mail",
             "id": 3082,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/f/ff/Warden%27s_Mail_item.png",
+            "url": "Warden's_Mail_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,
@@ -1296,7 +1296,7 @@ const itemsData = {
         {
             "name": "Winged Moonplate",
             "id": 3066,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/2/23/Winged_Moonplate_item.png",
+            "url": "Winged_Moonplate_item.png",
             "nickname": ["chaps", "pants", "leggings", "zoomin"],
             "tier": 2,
             "maps": {
@@ -1324,7 +1324,7 @@ const itemsData = {
         {
             "name": "Zeal",
             "id": 3086,
-            "url": "https://static.wikia.nocookie.net/leagueoflegends/images/c/c6/Zeal_item.png",
+            "url": "Zeal_item.png",
             "tier": 2,
             "maps": {
                 "sr": true,

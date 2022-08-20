@@ -208,8 +208,7 @@ export default function Main() {
                 })
         }
     }
-    console.log(showInfo)
-
+    
     return (
         <main>
             <div className='main--top'>
@@ -231,7 +230,7 @@ export default function Main() {
                     </div>
                     }
                 </div>
-                <h3 className="main--title LoLColor">LoL Item builder</h3>
+                <h3 className="main--title LoLColor">Item Builder LoL</h3>
 
                 {volume ?
                     <FontAwesomeIcon className="main--icon" icon={faVolumeHigh} color="#D9C241" size="2x" onClick={changeVolume} />
@@ -297,11 +296,11 @@ export default function Main() {
 
                     <div className="main--previousQuestion">
                         <h4 className="main--previousAnswer">Previous answer: </h4>
-                        <img className="main--itemPreviousQuestion" height="50px" width="50px" src={previousItem[0].url} alt="Missing"></img>
+                        <img className="main--itemPreviousQuestion" height="50px" width="50px" src={`/Complete/${previousItem[0].url}`} alt="Missing"></img>
                         <div>
-                            <img className="main--itemPreviousAnswer" height="50px" width="50px" src={previousItem[1].url} alt="Missing"></img>
-                            <img className="main--itemPreviousAnswer" height="50px" width="50px" src={previousItem[2].url} alt="Missing"></img>
-                            {previousItem.length === 4 && <img className="main--itemPreviousAnswer" height="50px" width="50px" src={previousItem[3].url} alt="Missing"></img>}
+                            <img className="main--itemPreviousAnswer" height="50px" width="50px" src={`/Components/${previousItem[1].url}`} alt="Missing"></img>
+                            <img className="main--itemPreviousAnswer" height="50px" width="50px" src={`/Components/${previousItem[2].url}`} alt="Missing"></img>
+                            {previousItem.length === 4 && <img className="main--itemPreviousAnswer" height="50px" width="50px" src={`/Components/${previousItem[3].url}`} alt="Missing"></img>}
                         </div>
                     </div>
                     :

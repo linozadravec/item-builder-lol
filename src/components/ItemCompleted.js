@@ -1,10 +1,8 @@
 import React from "react";
 
 export default function ItemCompleted(props){
-    //text mode
-    //<h2>{JSON.parse(props.completedItem).id ? JSON.parse(props.completedItem).name : "Empty"}</h2> 
     return  <div>
-                <img className="itemCompletedBtn" height="64px" width="64px" src={props.completedItem.id ? props.completedItem.url : "Empty"} alt="Missing"></img>
+                <img className="itemCompletedBtn" height="64px" width="64px" src={`/Complete/${props.completedItem.id ? props.completedItem.url : "Empty"}`} alt="Missing"></img>
             </div>
 
 }
