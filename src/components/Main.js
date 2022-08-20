@@ -75,9 +75,20 @@ export default function Main() {
     }, [selectedAnswers])
 
     React.useEffect(() => {
+        
+        itemsCompletedData.itemList.forEach((item) => {
+            const img = new Image();
+            img.src = "/Complete/" + item.url;
+        });
+        itemComponentsData.itemList.forEach((item) => {
+            const img = new Image();
+            img.src = "/Components/" + item.url;
+        });
+
         if (localStorage.getItem("recordPoints") === null) {
             localStorage.setItem("recordPoints", 0)
         }
+
     })
 
 
